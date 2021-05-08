@@ -12,6 +12,7 @@ export const createLogToServer = <S>(
   return (store) => (next) => (action) => {
     if (actionTypesToLog.includes(action.type)) {
       const event = config[action.type](action, store.getState());
+      console.log(event);
       sendEventToServer(event);
     }
 
@@ -27,10 +28,11 @@ function sendEventToServer(event: LogEvent): void {
     },
     body: JSON.stringify(event),
   })
-    .then(() => {
-      console.log("Log success!");
+    .then((res) => {
+      console.log(res);
+      console.log("Log success");
     })
     .catch((ex) => {
-      console.error("Log error :(", ex);
+      console.error("Log error", ex);
     });
 }
