@@ -1,6 +1,8 @@
 # Functional reactive programming task  
 Completed 08-functional-reactive-programming task with TS, RxJS.  
   
+Deploy: https://baranov-ivan-08-cats-catcher.netlify.app/  
+  
 You can check pull request and add your review there.  
   
 Ivan Baranau  
