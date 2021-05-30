@@ -1,0 +1,134 @@
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+#hex-1 {
+    animation: hex 3s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#hex-2 {
+    animation: hex 3s 150ms infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#hex-3 {
+    animation: hex 3s 300ms infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#hex-4 {
+    animation: hex 3s 450ms infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#hex-5 {
+    animation: hex 3s 600ms infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#hex-6 {
+    animation: hex 3s 750ms infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#center-hex {
+    animation: hex 3s 900ms infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#static-arc {
+    transform: rotate(-95deg);
+    animation: static-rotation 3s infinite cubic-bezier(.91,.15,.15,.87);
+    transform-origin: center;
+}
+
+#dynamic-arc {
+    animation: dynamic-rotation 3s infinite linear;
+    transform-origin: center;
+}
+
+#dynamic-full-arc {
+    animation: dynamic-full-rotation 3s infinite linear;
+    transform-origin: center;
+}
+
+@keyframes dynamic-full-rotation {
+
+    60% {
+        stroke-dashoffset: -804;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        stroke-dashoffset: -1608;
+    }
+}
+
+
+@keyframes dynamic-rotation {
+
+    30% {
+        stroke-dasharray: 30 804;
+    }
+
+    70% {
+        stroke-dasharray: 150 804;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        stroke-dasharray: 70 804;
+    }
+}
+
+@keyframes static-rotation {
+
+    90% {
+        transform: rotate(-455deg);
+    }
+
+    100% {
+        transform: rotate(-455deg);
+    }
+}
+
+
+@keyframes hex {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    90% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
