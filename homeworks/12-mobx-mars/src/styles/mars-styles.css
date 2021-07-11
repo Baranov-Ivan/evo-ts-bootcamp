@@ -1,0 +1,71 @@
+.rover-select {
+  margin-right: 10px;
+}
+
+.sols-list {
+  border: 1px solid #000;
+}
+
+.sol-input {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.header {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.tab-option {
+  text-decoration: underline;
+  color: #00f;
+  cursor: pointer;
+}
+
+.tab-selected {
+  text-decoration: none;
+  color: #000;
+  cursor: default;
+  pointer-events: none;
+}
+
+.mars-photos-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  grid-gap: 10px;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+
+.mars-photo {
+  object-fit: cover;
+  width: 100%;
+  min-height: 100px;
+}
+
+.favicon {
+  width: 30px;
+  height: 23px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  cursor: pointer;
+}
+
+.photo-container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.caption {
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  font-size: 10px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+}
